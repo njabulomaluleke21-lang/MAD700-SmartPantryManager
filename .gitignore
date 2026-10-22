@@ -1,0 +1,20 @@
+# Generated Android Studio and Gradle files
+.gradle/
+build/
+**/build/
+local.properties
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild/
+captures/
+*.hprof
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Do not add signing keys or secrets
+*.keystore
+*.jks
