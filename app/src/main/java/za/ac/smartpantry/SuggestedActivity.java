@@ -1,0 +1,4 @@
+package za.ac.smartpantry;
+import android.app.*;import android.os.*;import android.view.*;import androidx.recyclerview.widget.*;import java.util.*;
+public class SuggestedActivity extends Activity{ @Override public void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_suggested);Ui.nav(this);((RecyclerView)findViewById(R.id.recipesList)).setLayoutManager(new LinearLayoutManager(this));}
+ @Override protected void onResume(){super.onResume();List<Recipe> found=new PantryDatabase(this).suggestions();((RecyclerView)findViewById(R.id.recipesList)).setAdapter(new RecipeAdapter(this,found));findViewById(R.id.emptyLabel).setVisibility(found.isEmpty()?View.VISIBLE:View.GONE);}}

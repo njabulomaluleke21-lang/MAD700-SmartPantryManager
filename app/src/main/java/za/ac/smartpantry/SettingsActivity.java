@@ -1,0 +1,3 @@
+package za.ac.smartpantry;
+import android.app.*;import android.os.*;import android.widget.*;
+public class SettingsActivity extends Activity{@Override public void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_settings);Ui.nav(this);Switch toggle=findViewById(R.id.expiryToggle);toggle.setChecked(getSharedPreferences("pantry_settings",0).getBoolean("expiry_alert",true));toggle.setOnCheckedChangeListener((button,checked)->getSharedPreferences("pantry_settings",0).edit().putBoolean("expiry_alert",checked).apply());}}
